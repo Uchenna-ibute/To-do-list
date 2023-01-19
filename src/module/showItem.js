@@ -1,6 +1,6 @@
 const display = (array) => {
-    const view = `
-      <div class="item">
+  const view = `
+    <div class="item">
         <div class='goes'></div>
         <i class="fa-solid fa-check"></i>
       </div>
@@ -11,10 +11,10 @@ const display = (array) => {
           <i class="fa-solid fa-trash" id="trash"></i>
       </div>`;
 
-    const item = document.createElement('div');
-    item.classList.add('each');
-    item.innerHTML = view;
-    const list =document.querySelector('.list')
-    list.appendChild(item)
-  };
-  export default display;
+  const item = document.createElement('div');
+  item.classList.add('each');
+  item.innerHTML = view;
+  const list = document.querySelector('.list');
+  list.appendChild(item);
+};
+export default display;
