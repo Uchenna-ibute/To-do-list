@@ -68,7 +68,7 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link]( https://uchenna-ibute.github.io/Awesome-book-es6/)
+- [Live Demo Link](https://uchenna-ibute.github.io/To-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -172,7 +172,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Uchenna-ibute/Awesome-book-es6/issues).
+Feel free to check the [issues page](https://github.com/Uchenna-ibute/To-do-list/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -183,7 +183,7 @@ Feel free to check the [issues page](https://github.com/Uchenna-ibute/Awesome-bo
 > Write a message to encourage readers to support your project
 
 If you like this project, please provide a STAR in
-[Github project repository](https://github.com/Uchenna-ibute/Awesome-book-es6.git)
+[Github project repository](https://github.com/Uchenna-ibute/To-do-list.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
