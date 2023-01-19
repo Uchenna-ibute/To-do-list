@@ -23,11 +23,6 @@
         "js": "always", "json": "always"
       }]
     },
-    "settings": {
-      "import/resolver": {
-        "typescript": {}
-      }
-    },
     "ignorePatterns": [
       "dist/",
       "build/"
