@@ -1,27 +1,51 @@
 import './style.css';
-import dispays from './modules/task';
-import remove from './modules/deleteItem';
-import { display, todo } from './modules/display';
+import { updateLocalStorage, tasks } from './modules/update.js';
+import changeicon from './modules/change.js';
+import deleteTask from './modules/deleteTask.js';
+import editList from './modules/edit.js';
+import renderTasks from './modules/display.js';
+form.addEventListener('submit', (e)=>{
+    e.preventDefault()
+    const input = document.querySelector("input");
+    if (input.value === "") {return alert("Please enter a task")};
+    const task = {
+      description: input.value,
+      completed: false,
+      index: tasks.length + 1
+    };
 
-const clearbtn = document.getElementById('clear');
-clearbtn.addEventListener('click',() => {
-    todo.clearCompleted();
-    display();
-});
-const form = document.querySelector('form');
-form.addEventListener('submit', () => {
-    const lists = document.querySelector('.form');
-    const item = lists.value;
-    if (item !== '') {
-      todo.addList(description);
-      display();
-      lists.value = '';
-    }
-});
+    // add tasks
+    tasks.push(task);
+    renderTasks();
+    input.value = "";
+    updateLocalStorage();
 
-document.addEventListener('click', (e) => {
-  if (e.target.className === 'fa fa-trash') {
-    remove(e.target.id);
-  }
-});
-dispays();
+    //changeicon
+    changeicon()
+
+     //remove task
+    deleteTask();
+
+
+    //edit task
+
+    editList()
+
+})
+
+window.addEventListener('load',()=>{
+    const reshow = JSON.parse(localStorage.getItem('tasks'));
+    tasks.push(...tasks,...reshow);
+    renderTasks();
+
+    //changeicon
+    changeicon()
+
+     //remove task
+    deleteTask();
+
+
+    //edit task
+
+    editList()
+   })

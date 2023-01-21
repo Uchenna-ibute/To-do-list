@@ -1,49 +1,52 @@
-import List from './list.js';
+/*const display = (arry, main) => {
+    const view = /*`
+      <div class="ic">
+        <div class='white'></div>
+        <i class="fa-solid fa-check"></i>
+      </div>
+      <form>
+        <input type="text" id="tasks" value= "${arry.desc}" readonly >
+      </form>
+      <div class="icons">
+          <i class="fa-solid fa-ellipsis-vertical" id="more"></i>
+          <i class="fa-solid fa-trash" id="trash"></i>
+      </div>`;*/
+      /*`<li class="todo">
+          <div>
+              <input type="checkbox" id="checkout">
+              <input type="text" id="tasks" value= "${arry.desc}" readonly >
+              <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-trash" id=${arry.index}></i>
+          </div>
+      </li>`
+    const each = document.createElement('ul');
+    each.classList.add('allTodes');
+    each.innerHTML = view;
+    main.appendChild(each);
+  };
+  export default display;
+*/
+import { updateLocalStorage, tasks } from './update.js';
+function renderTasks() {
+  const taskList = document.getElementById("task-list");
+// let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    taskList.innerHTML = "";
+    tasks.forEach((task, index) => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <input type="checkbox" class="fas" id="task${index}" ${task.completed ? "checked" : ""}>
 
-const todo = new List();
-const display = () => {
-    const list = document.querySelector('.list')
-    list.replaceChildren();
-    if (todo.todes.length > 0) {
-        list.style.display = 'block';
-        const contain = document.querySelector('.todos');
-        todo.todes.map((value) => {
-            const items = document.createElement('li');
-            items.className = 'todo';
-            let container = `<div>
-            <input type="checkbox" id="check" class="check">
-            <p id="description">${value.description}</p>
-            <i class="fa fa-ellipsis-v"></i>
-            <i class="fa fa-trash" id=${value.index}></i>
-            </div>`
-            let input = document.querySelector('.check')
-            if (value.completed === true) {
-                input.checked = 'checked'
-            }
-            input.onclick = (event) => {
-                todo.completeList(event.target.checked, value.index)
-            };
-            let description = document.querySelector('p')
-            items.appendChild(container)
-            let icon1 = document.querySelector('.fa-ellipsis-v')
-            items.onclick = () => {
-                description.contentEditable = 'true'
-                items.style.backgroundColor = 'aqua'
-                description.style.color = 'black'
-                icon1.style.display='none'
-            }
-            description.addEventListener('keyup', (event) => {
-                if (event.target.id === 'description')
-                  if (event.key === 'Enter'){
-                    display()
-                   } else {
-                    todo.edit(event.target, value.index)
-                }
-            })
-            contain.append(items)
-            return items
-        })
-        list.appendChild(contain)
-    }
-}
-export { display, todo}
+        <form id = 'worr'>
+          <input value="${task.description}" id='word' readonly>
+        </form>
+
+        <button class="delete">
+          <i class="fa-solid fa-times" id='times'></i>
+          <i class="fa-solid fa-pen" id='pen'></i>
+        </button>
+      `;
+      taskList.appendChild(li);
+    });
+  }
+
+  export default renderTasks
