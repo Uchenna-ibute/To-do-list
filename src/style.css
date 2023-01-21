@@ -1,28 +1,20 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
 body {
   background-color: rgb(139 108 108);
     padding: 50px;
     padding-top: 150px;
 }
 
-.todo {
+section {
   box-sizing: border-box;
   border-style: solid;
   border-color: #cbcbcb;
-  margin-top: 80px;
   margin-left: 20px;
   margin-right: 20px;
   line-height: 40px;
   background-color: #bb9b9b;
 }
 
-.heading {
+#list-title {
   display: flex;
   border-bottom: solid;
   border-color: #cbcbcb;
@@ -31,90 +23,85 @@ body {
   background-color: white;
 }
 
-.reload {
-  margin-right: 10px;
-  margin-top: 10px;
-  height: 20px;
+#list-title h1 {
+  padding-left: 18px;
+}
+
+button {
   border: none;
-  background: #fff;
+  background-color: white;
+}
+
+#list-title button {
+  margin-right: 18px;
+  padding: 0;
 }
 
 input {
   border: none;
-  font-style: italic;
-  outline: none;
-  padding-left: 10px;
-  width: 100%;
-  padding: 10px;
 }
 
-.fas {
-  width: 3%;
-  margin-right: 10px
+#input-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 18px;
+  border-bottom: 1px solid lightgray;
 }
 
-#worr {
-  width: 100%;
-  margin-right: 10px;
+.each-row {
+  padding: 12px 18px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 }
 
-.options {
-  border: none;
-  display: none;
+.task-item,
+.add-list {
+  width: 90%;
 }
 
-#form {
-  border-bottom: solid;
-  border-color: #cbcbcb;
+.row-info {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
 }
 
-form button {
-  margin-right: 10px;
-  border: none;
-  background-color: #fff;
+.row-btn {
   cursor: pointer;
 }
 
-#task-list li {
-  list-style: none;
-  display: flex;
-
-    justify-content: space-between;
-    align-items: center;
-}
-
-.formclass {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.tasks li {
-  list-style-type: none;
-  border-bottom: solid;
-  border-color: #cbcbcb;
-  padding-left: 10px;
-}
-
-label {
-  padding-left: 10px;
+.clear-all {
+  background-color: lightgray;
+  width: 100%;
 }
 
 #clear {
-  border: none;
-  width: 100%;
-  background-color: #efeded;
-  height: 45px;
-}
-
-#times {
-  display: none;
-}
-.change #times{
+  color: black;
+  text-decoration: none;
+  padding: 18px;
+  text-align: center;
+  margin: auto auto;
   display: block;
 }
 
-.change #pen {
-  display: none;
+.arrow {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#do-input {
+  color: #000;
+}
+
+.list {
+  height: max-content;
+  width: 100%;
+}
+
+#message {
+  text-align: center;
 }

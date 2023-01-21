@@ -1,51 +1,80 @@
 import './style.css';
-import { updateLocalStorage, tasks } from './modules/update.js';
-import changeicon from './modules/change.js';
-import deleteTask from './modules/deleteTask.js';
-import editList from './modules/edit.js';
-import renderTasks from './modules/display.js';
-form.addEventListener('submit', (e)=>{
-    e.preventDefault()
-    const input = document.querySelector("input");
-    if (input.value === "") {return alert("Please enter a task")};
-    const task = {
-      description: input.value,
-      completed: false,
-      index: tasks.length + 1
-    };
+import Tasks from './modules/Task.js';
+import editTask from './modules/listEdit.js';
+import clearCompletedTasks from './modules/listClear.js';
+import updateTaskStatus from './modules/display.js';
 
-    // add tasks
-    tasks.push(task);
-    renderTasks();
-    input.value = "";
-    updateLocalStorage();
+const displayContainer = document.getElementById('do-list');
 
-    //changeicon
-    changeicon()
+// Display the book in the array
+function printTasks() {
+  const array = JSON.parse(localStorage.getItem('array')) || [];
+  let innerhtml = '';
+  let checker = '';
 
-     //remove task
-    deleteTask();
+  array.forEach((task) => {
+    if (task.completed === false) {
+      checker = '';
+    } else {
+      checker = 'checked';
+    }
+    innerhtml += `
+    <div class="each-row">
+    <div class="row-info">
+    <input ${checker} type="checkbox" class="check" id="input${task.index}">
+     <input id="${task.index}" class="task-list list" value="${task.description}"></div>
+     <button  type="button" id="remove-btn${task.index}" class="row-btn material-symbols-outlined">
+     do_not_disturb_on
+    </button>
+   </div>
+   `;
+  });
 
+  const doList = document.querySelector('#do-list');
+  const inputForm = document.getElementById('input-form');
+  const description = document.getElementById('input-task');
 
-    //edit task
+  // Calling the event listener when the form is submitted
 
-    editList()
+  inputForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const obj = new Tasks();
+    obj.addTask(description.value);
+    printTasks();
 
-})
+    description.value = '';
+  });
 
-window.addEventListener('load',()=>{
-    const reshow = JSON.parse(localStorage.getItem('tasks'));
-    tasks.push(...tasks,...reshow);
-    renderTasks();
+  doList.innerHTML = innerhtml;
+}
 
-    //changeicon
-    changeicon()
+// Call the Delete function
+displayContainer.addEventListener('click', (e) => {
+  if (e.target.classList.contains('row-btn')) {
+    const initialID = e.target.id;
+    const { length } = initialID;
+    const id = initialID.slice(10, length);
+    const finalID = Number(id);
+    const obj = new Tasks();
+    obj.removeTask(finalID);
+    printTasks();
+  }
+});
 
-     //remove task
-    deleteTask();
+// Edit task
 
+const array = JSON.parse(localStorage.getItem('array')) || [];
+displayContainer.addEventListener('click', (e) => {
+  if (e.target.classList.contains('task-list')) {
+    editTask(e.target, array);
+  }
+});
 
-    //edit task
+// This function update the checkbox status
+updateTaskStatus();
 
-    editList()
-   })
+// This function clear completed task
+clearCompletedTasks();
+
+// Calling the display function
+printTasks();
