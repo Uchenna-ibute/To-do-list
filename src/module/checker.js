@@ -8,19 +8,16 @@ const checker = (te, bo, to) => {
       parent.classList.add('check');
       const grand = e.parentElement.parentElement;
       const line = grand.querySelector('#tasks');
-      line.classList.add('line')
-      grand.setAttribute('id','completed');
+      line.classList.add('line');
+      grand.setAttribute('id', 'completed');
 
       te.forEach((t, b) => {
         if (b === n) {
           t.completed = true;
         }
         updateLocalStorage(te);
-
-      })
-
+      });
     });
-
   });
 
   // uncheck
@@ -31,7 +28,7 @@ const checker = (te, bo, to) => {
       parent.classList.remove('check');
       const grand = e.parentElement.parentElement;
       const line = grand.querySelector('#tasks');
-      line.classList.remove('line')
+      line.classList.remove('line');
       grand.removeAttribute('id');
       te.forEach((t, b) => {
         if (b === n) {
@@ -39,11 +36,8 @@ const checker = (te, bo, to) => {
         }
         updateLocalStorage(te);
       });
-      
     });
-
   });
-
 };
 
 export default checker;
