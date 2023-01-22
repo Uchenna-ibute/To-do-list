@@ -1,4 +1,4 @@
-const display = (array,list) => {
+const display = (array, list) => {
   const view = `
     <div class="item" data-completed ='${array.completed}'>
         <div class='goes'></div>

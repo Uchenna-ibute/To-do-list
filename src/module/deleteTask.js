@@ -14,9 +14,9 @@
 //             tep.index = num + 1;
 //         })
 //         updateLocalStorage(tasks);
-//       } 
+//   }
 //        })
-//       }) 
+//       })
 //     })
 //   }
 

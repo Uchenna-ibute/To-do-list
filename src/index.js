@@ -1,7 +1,4 @@
-import form from './module/form';
+import form from './module/form.js';
 import './style.css';
 
-
 form();
-
-
