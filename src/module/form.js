@@ -16,8 +16,8 @@ const form = () => {
 
     // created an object
 
-  const input = document.querySelector('input');
-  if (input.value === '') { return };
+    const input = document.querySelector('input');
+    if (input.value === '') { return; }
     const task = {
       description: input.value,
       completed: false,
@@ -28,7 +28,7 @@ const form = () => {
 
     tasks.push(task);
     list.innerHTML = '';
-    tasks.map(task => {display(task, list)});
+    tasks.map((task) => { display(task, list)} );
     input.value = '';
     updateLocalStorage(tasks);
     MOR(tasks);
@@ -50,7 +50,7 @@ const form = () => {
             time.parentElement.parentElement.remove();
             tasks.forEach((t, m) => {
               if (n === m) {
-                tasks = tasks.filter(tee => {tee.index !== t.index});
+                tasks = tasks.filter((tee) => { tee.index !== t.index });
 
                 // changeindexs
                 tasks.forEach((tep, num) => {
@@ -99,7 +99,7 @@ const form = () => {
         if (e.id === 'completed') {
           e.remove();
         }
-        tasks = tasks.filter(t => {t.completed !== true});
+        tasks = tasks.filter((t) => { t.completed !== true });
         updateLocalStorage(tasks);
       });
     });
@@ -109,7 +109,7 @@ const form = () => {
   window.addEventListener('load', () => {
     const reshow = JSON.parse(localStorage.getItem('store')) || [];
     tasks.push(...tasks, ...reshow);
-    tasks.map(task => {display(task, list)});
+    tasks.map((task) => { display(task, list) });
     updateLocalStorage(tasks);
     // edit task
     const pen = document.querySelectorAll('#more');
@@ -127,7 +127,7 @@ const form = () => {
             time.parentElement.parentElement.remove();
             tasks.forEach((t, m) => {
               if (n === m) {
-                tasks = tasks.filter(tee => {tee.index !== t.index});
+                tasks = tasks.filter((tee) => { tee.index !== t.index });
                 // changeindexs
                 tasks.forEach((tep, num) => {
                   tep.index = num + 1;
@@ -173,7 +173,7 @@ const form = () => {
           if (e.id === 'completed'){
             e.remove();
           }
-          tasks = tasks.filter(t => {t.completed !== true});
+          tasks = tasks.filter((t) => { t.completed !== true });
           updateLocalStorage(tasks);
         });
       });
