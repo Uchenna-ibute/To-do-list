@@ -10,7 +10,7 @@ export default class Tasks {
   addTask(description) {
     this.description = description;
     if (description === '') {
-      document.getElementById('message').innerHTML = '*Please add a task to the list.';
+      document.getElementById('message').innerHTML = '';
       message.style.color ='red';
 
     } else {
@@ -21,7 +21,7 @@ export default class Tasks {
         work.index = i + 1;
       });
       localStorage.setItem('array', JSON.stringify(array));
-      document.getElementById('message').innerHTML = '*New task added successfully.';
+      document.getElementById('message').innerHTML = '';
       message.style.color ='green';
     }
   }

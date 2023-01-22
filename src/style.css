@@ -105,3 +105,7 @@ input {
 #message {
   text-align: center;
 }
+
+.line {
+  text-decoration: line-through;
+}

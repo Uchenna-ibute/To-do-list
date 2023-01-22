@@ -1,6 +1,7 @@
 export default function updateTaskStatus() {
   document.addEventListener('DOMContentLoaded', () => {
     const inputChecks = document.querySelectorAll('.check');
+    inputChecks.classList.toggle('line')
     inputChecks.forEach((check) => {
       check.addEventListener('change', (e) => {
         let array = [];

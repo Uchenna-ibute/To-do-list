@@ -69,6 +69,8 @@ displayContainer.addEventListener('click', (e) => {
     editTask(e.target, array);
   }
 });
+const inputChecks = document.querySelectorAll('.check');
+  inputChecks.classList.toggle('line')
 
 // This function update the checkbox status
 updateTaskStatus();
