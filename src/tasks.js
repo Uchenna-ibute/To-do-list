@@ -1,4 +1,4 @@
-import { listCatalogue, sortTasks, updateTask } from "./addToSrorage.js";
+import { listCatalogue, sortTasks, updateTask } from './addToSrorage.js';
 
 class Task {
   constructor(description) {
@@ -10,7 +10,7 @@ class Task {
   createTask = (
     description,
     index = listCatalogue.length + 1,
-    complete = this.complete
+    complete = this.complete,
   ) => {
     listCatalogue.push({ index, complete, description });
     updateTask();
@@ -18,7 +18,7 @@ class Task {
 
   deleteTask = (task) => {
     const filterList = listCatalogue.filter(
-      (listItem) => task === listItem.description
+      (listItem) => task === listItem.description,
     );
     const filterTask = listCatalogue.indexOf(filterList[0]);
     if (filterTask !== -1) {

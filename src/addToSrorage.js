@@ -1,7 +1,6 @@
-export const listCatalogue =
-  JSON.parse(localStorage.getItem("listCatalogue")) || [];
+export const listCatalogue = JSON.parse(localStorage.getItem('listCatalogue')) || [];
 export const updateTask = () => {
-  localStorage.setItem("listCatalogue", JSON.stringify(listCatalogue));
+  localStorage.setItem('listCatalogue', JSON.stringify(listCatalogue));
 };
 export const sortTasks = () => {
   listCatalogue.sort((a, b) => a.index - b.index);

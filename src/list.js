@@ -1,11 +1,11 @@
-import Task from "./tasks.js";
-import { listCatalogue } from "./addToSrorage.js";
-import { resetColors, resetList } from "./resetList.js";
+import Task from './tasks.js';
+import { listCatalogue } from './addToSrorage.js';
+import { resetColors, resetList } from './resetList.js';
 
 const todayList = new Task();
 
 export const addItem = (item) => {
-  const todayListBox = document.querySelector(".list");
+  const todayListBox = document.querySelector('.list');
   const id = listCatalogue.length + 1;
   todayList.createTask(item);
   todayListBox.innerHTML += `<li class="list-item" id="list-${id}">
@@ -19,27 +19,27 @@ export const addItem = (item) => {
 };
 
 export const deleteItem = (item) => {
-  const todayListBox = document.querySelector(".list");
+  const todayListBox = document.querySelector('.list');
   const task = item.querySelector('input[type="text"]').value;
   todayList.deleteTask(task);
   todayListBox.removeChild(item);
 };
 
 export const editItem = (item, ident) => {
-  if (item.classList.contains("task-display")) {
+  if (item.classList.contains('task-display')) {
     item = item.parentElement;
     ident = +item.id.slice(-1);
   }
-  const func = item.querySelector(".func");
-  const del = item.querySelector(".fa-trash-can");
+  const func = item.querySelector('.func');
+  const del = item.querySelector('.fa-trash-can');
   const input = item.querySelector('input[name="tasks-item"]');
-  item.style.backgroundColor = "#fcf299";
-  input.style.backgroundColor = "#fcf299";
-  func.style.display = "none";
-  del.style.display = "block";
-  input.removeAttribute("readonly");
+  item.style.backgroundColor = '#fcf299';
+  input.style.backgroundColor = '#fcf299';
+  func.style.display = 'none';
+  del.style.display = 'block';
+  input.removeAttribute('readonly');
   input.focus();
-  input.addEventListener("keyup", () => {
+  input.addEventListener('keyup', () => {
     listCatalogue.forEach((task) => {
       if (task.index === ident) {
         const desc = item.querySelector('input[name="tasks-item"]').value;
@@ -47,13 +47,13 @@ export const editItem = (item, ident) => {
       }
     });
   });
-  input.addEventListener("keypress", (event) => {
-    if (event.key === "Enter") {
+  input.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
       listCatalogue.forEach((task) => {
         if (task.index === ident) {
           const desc = item.querySelector('input[name="tasks-item"]').value;
           todayList.editTask(ident, desc);
-          input.setAttribute("readonly", "readonly");
+          input.setAttribute('readonly', 'readonly');
           resetList();
           resetColors();
         }
@@ -63,7 +63,7 @@ export const editItem = (item, ident) => {
 };
 
 export const clearItems = (checkboxes) => {
-  const todayListBox = document.querySelector(".list");
+  const todayListBox = document.querySelector('.list');
   checkboxes.forEach((checkbox) => {
     if (checkbox.checked) {
       const item = checkbox.parentElement.parentElement;

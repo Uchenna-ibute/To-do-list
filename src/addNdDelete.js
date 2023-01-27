@@ -1,7 +1,7 @@
-import { listCatalogue } from "./addToSrorage.js";
-import { checkedFormat } from "./checked.js";
+import { listCatalogue } from './addToSrorage.js';
+import { checkedFormat } from './checked.js';
 
-const todayListBox = document.querySelector(".list");
+const todayListBox = document.querySelector('.list');
 const renderCatalogue = () => {
   listCatalogue.forEach((item) => {
     todayListBox.innerHTML += `<li class="list-item" id="list-${item.index}">
@@ -13,13 +13,13 @@ const renderCatalogue = () => {
                         <i class="fa-solid func fa-ellipsis-vertical"></i>
                 </li>`;
   });
-  const list = document.querySelectorAll(".list-item");
+  const list = document.querySelectorAll('.list-item');
   list.forEach((listItem) => {
-    const task = listItem.querySelector(".task-item").value;
+    const task = listItem.querySelector('.task-item').value;
     listCatalogue.forEach((item) => {
       if (item.description === task && item.complete === true) {
-        listItem.querySelector(".checkbox").checked = true;
-        const locTask = listItem.querySelector(".task-item");
+        listItem.querySelector('.checkbox').checked = true;
+        const locTask = listItem.querySelector('.task-item');
         checkedFormat(listItem, locTask);
       }
     });
