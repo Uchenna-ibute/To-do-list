@@ -87,7 +87,7 @@ git - git should be installed in local machine. git is necessary for cloning thi
 
 Clone this repository to your desired folder:
 
-git clone https://github.com/Uchenna-ibute/Awesome-book-es6.git
+git clone https://https://github.com/Uchenna-ibute/To-do-list.git
 
 ### Install
 
@@ -193,8 +193,6 @@ If you like this project, please provide a STAR in
 
 > Give credit to everyone who inspired your codebase.
 
-I want to use the way to acknowledge my fellow students, Popoola Samuel
- and Ochuba Chukwuemeka. For all the kind and encourage wording and for doing the projects together. I am gratefull.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
