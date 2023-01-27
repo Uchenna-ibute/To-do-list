@@ -21,7 +21,6 @@
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
-    - [Setup](#setup)
     - [Install](#install)
     - [Usage](#usage)
     - [Run tests](#run-tests)
@@ -84,60 +83,36 @@ In order to run this project you need:
 git - git should be installed in local machine. git is necessary for cloning this project repository
 
 
-### Setup
-
-Clone this repository to your desired folder:
-
-git clone https://https://github.com/Uchenna-ibute/To-do-list.git
-
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+- Clone [this](https://https://github.com/Uchenna-ibute/To-do-list.git) GitHub repository using `git clone https://https://github.com/Uchenna-ibute/To-do-list.git`
+- Initialize the package manager using `npm init -y`
+- Download all required modules using `npm install` inside the project directory (/To-Do-List)
+- Launch project on browser using `npm run start` inside the project directory (/To-Do-List)
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
+- Launch project on browser using `npm run start` inside the project directory (/To-Do-List)
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+- Run the test  using `npm test` inside the project directory (/To-Do-List)
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
-Example:
+To-Do-List application can be deployed on any web server that can host a Node.js runtime environment
 
-```sh
-
-```
- -->
+The project was successfully deployed to GitHub Pages. The live project can be
+viewed at the following links:<br><br>
+[To-Do-List App](https://https://github.com/Uchenna-ibute/To-do-list.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
