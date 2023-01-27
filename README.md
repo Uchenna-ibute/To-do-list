@@ -13,25 +13,25 @@
 
 # 📗 Table of Contents
 
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
-- [📝 License](#license)
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 To-Do List ](#-to-do-list-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+    - [Install](#install)
+    - [Usage](#usage)
+    - [Run tests](#run-tests)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [❓ FAQ ](#-faq-)
+  - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
 
@@ -83,60 +83,36 @@ In order to run this project you need:
 git - git should be installed in local machine. git is necessary for cloning this project repository
 
 
-### Setup
-
-Clone this repository to your desired folder:
-
-git clone https://github.com/Uchenna-ibute/Awesome-book-es6.git
-
 ### Install
 
 Install this project with:
 
-<!--
-Example command:
-
-```sh
-  cd my-project
-  gem install
-```
---->
+- Clone [this](https://https://github.com/Uchenna-ibute/To-do-list.git) GitHub repository using `git clone https://https://github.com/Uchenna-ibute/To-do-list.git`
+- Initialize the package manager using `npm init -y`
+- Download all required modules using `npm install` inside the project directory (/To-Do-List)
+- Launch project on browser using `npm run start` inside the project directory (/To-Do-List)
 
 ### Usage
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
-```sh
-  rails server
-```
---->
+- Launch project on browser using `npm run start` inside the project directory (/To-Do-List)
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+- Run the test  using `npm test` inside the project directory (/To-Do-List)
 
 ### Deployment
 
 You can deploy this project using:
 
-<!--
-Example:
+To-Do-List application can be deployed on any web server that can host a Node.js runtime environment
 
-```sh
-
-```
- -->
+The project was successfully deployed to GitHub Pages. The live project can be
+viewed at the following links:<br><br>
+[To-Do-List App](https://https://github.com/Uchenna-ibute/To-do-list.git)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,6 +127,12 @@ Example:
 - GitHub: [@Uchennaibute](https://github.com/Uchennaibute@github)
 - Twitter: [@Uc_Ibute](https://twitter.com/Uchennaibute@twitter)
 - LinkedIn: [Uchenna Ibute](https://linkedin.com/in/Uchennaibute@linkedin)
+
+👤 **Ghulam Subbhani(Malik)**
+
+- GitHub: [@githubhandle](https://github.com/gsmalik030)
+- Twitter: [@twitterhandle](https://twitter.com/gsmalik030)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ghulam-subbhani-4b1281252/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -193,8 +175,6 @@ If you like this project, please provide a STAR in
 
 > Give credit to everyone who inspired your codebase.
 
-I want to use the way to acknowledge my fellow students, Popoola Samuel
- and Ochuba Chukwuemeka. For all the kind and encourage wording and for doing the projects together. I am gratefull.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
